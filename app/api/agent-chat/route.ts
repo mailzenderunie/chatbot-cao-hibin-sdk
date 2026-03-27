@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { runAgent } from "@/lib/agent";
+import { runWorkflow } from "@/lib/agent";
 
 export async function POST(req: Request) {
   try {
@@ -14,18 +14,23 @@ export async function POST(req: Request) {
       );
     }
 
-    const result = await runAgent(message, messages);
+    const result = await runWorkflow({
+      input_as_text: message,
+      messages
+    });
 
-    return NextResponse.json(result);
+    return NextResponse.json({
+      answer: result.output_text
+    });
   } catch (error) {
     console.error("Fout in /api/agent-chat:", error);
 
     return NextResponse.json(
-  {
-    answer:
-      "Er ging wat mis bij het beantwoorden van je vraag. Probeer de pagina te herladen en stel je vraag opnieuw. Blijft het probleem? Neem dan contact op met het Service Center via 0345 851 963 voor je vraag."
-  },
-  { status: 200 }
-);
+      {
+        answer:
+          "Er ging wat mis bij het beantwoorden van je vraag. Probeer de pagina te herladen en stel je vraag opnieuw. Blijft het probleem? Neem dan contact op met het Service Center via 0345 851 963 voor je vraag."
+      },
+      { status: 200 }
+    );
   }
 }
