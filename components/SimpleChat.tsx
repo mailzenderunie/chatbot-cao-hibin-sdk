@@ -157,7 +157,7 @@ export default function SimpleChat() {
       <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder="Stel hier je vraag over de cao NN-Group..."
+        placeholder="Stel hier je vraag over de cao HIBIN..."
         style={{
           flex: 1,
           border: "none",
@@ -205,7 +205,7 @@ export default function SimpleChat() {
           gap: 16,
         }}
       >
-        <span>💬 Chat over de cao NN-Group</span>
+        <span>💬 Chat over de cao HIBIN</span>
 
         {messages.length > 0 && (
           <button
@@ -368,7 +368,7 @@ export default function SimpleChat() {
                 color: "#2b2b2b",
               }}
             >
-              Hoi, ik ben Una! Waarmee kan ik je helpen?
+              Hoi, ik ben Una van Vakbond De Unie! Waarmee kan ik je helpen?
             </h2>
 
             <div style={{ marginBottom: 28 }}>
