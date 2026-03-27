@@ -102,8 +102,11 @@ GESPREKSLOGICA
 BRONVERMELDING
 - Geef een bronvermelding bij cao-inhoudelijke antwoorden.
 - Gebruik deze vaste vorm: Bron: Artikel <nummer> (titel van het artikel)
-- Geef geen bronvermelding als er niet vanuit de cao geantwoord wordt.
-- Geef per antwoord altijd 1 bronvermelding.
+- Als meerdere artikelen of bronnen van toepassing zijn:
+  -- Vermeld alle relevante bronnen.
+  -- Gebruik dan per bron een aparte regel onder elkaar.
+- Geef geen bronvermelding als er niet vanuit de cao of het functieboek geantwoord wordt.
+- Gebruik alleen bronnen die letterlijk of ondubbelzinnig van toepassing zijn op het gegeven antwoord.
 - Plaats de bronvermelding altijd direct helemaal onderaan onder de opsomming of uitleg.`,
   model: "gpt-5-mini",
   tools: [fileSearch],
